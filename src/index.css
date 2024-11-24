@@ -78,6 +78,12 @@
     rgba(60, 60, 65, 1) 0%,
     rgba(85, 85, 91, 1) 100%
   );
+
+  --linearAccent: linear-gradient(
+    90deg,
+    rgba(10, 200, 185, 1) 0%,
+    rgb(25, 159, 148) 100%
+  );
 }
 
 body {
@@ -134,16 +140,26 @@ button {
   border-radius: 0.3em;
   border: none;
   text-transform: uppercase;
+  font-family: "Arial";
 
   transition: ease 0.2s;
 }
 
 button.primary {
   background: var(--linearPrimary);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 button.primary:hover {
+  filter: brightness(1.1);
+}
+
+button.accent {
+  background: var(--linearAccent);
+  font-weight: 600;
+}
+
+button.accent:hover {
   filter: brightness(1.1);
 }
 
@@ -155,6 +171,10 @@ button.secondary {
 
 button.secondary:hover {
   background-color: rgba(141, 141, 142, 0.5);
+}
+
+button:active {
+  transform: scale(0.985);
 }
 
 .bigContainer {
