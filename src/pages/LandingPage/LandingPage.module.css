@@ -1,3 +1,4 @@
+/* WELCOME */
 .welcomeContainer {
   display: flex;
   justify-content: center;
@@ -6,13 +7,6 @@
 
   letter-spacing: 0.5em;
   gap: 2em;
-
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    var(--background-600) 2px,
-    transparent 0
-  );
-  background-size: 40px 40px;
 }
 
 .videoContainer {
@@ -106,6 +100,167 @@
   z-index: 99;
 }
 
+/* FEATURES */
+.featuresContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--background-950);
+  color: var(--text-200);
+
+  border-bottom: var(--primary) solid 0.25em;
+  -webkit-box-shadow: 0px 0px 25px 15px var(--background-950);
+  -moz-box-shadow: 0px 0px 25px 15px var(--background-950);
+  box-shadow: 0px 0px 25px 15px var(--background-950);
+
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    var(--background-800) 2px,
+    transparent 0
+  );
+  background-size: 40px 40px;
+
+  outline: var(--primary) solid 0.25em;
+}
+
+.featuresContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0px 0px 31px 12px var(--background-950);
+  -moz-box-shadow: inset 0px 0px 31px 12px var(--background-950);
+  box-shadow: inset 0px 0px 31px 12px var(--background-950);
+  z-index: -1;
+}
+
+.featuresList {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
+
+.featuresList h4 {
+  padding: 0.4em;
+  border-radius: 0.1em;
+  text-transform: uppercase;
+  transition: border 0.25s ease;
+  font-size: 1.5em;
+  text-align: center;
+  border-bottom: transparent solid 0.3em;
+}
+
+.featuresList .active {
+  border-bottom: var(--primary-600) solid 0.15em;
+}
+
+.featuresList h4:hover {
+  cursor: default;
+
+  border-bottom: var(--primary-600) solid 0.15em;
+}
+
+.currentFeature {
+  width: 90%;
+  height: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.currentFeature > div {
+  position: relative;
+  width: 40em;
+  height: 40em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+
+  outline: var(--primary) solid 0.1em;
+
+  background: linear-gradient(130deg, transparent 0%, var(--primary-900) 100%);
+  background-position: 0% 0%;
+  background-size: 200% 200%;
+
+  transition: 1s ease;
+}
+
+.currentFeature > div:hover {
+  background-position: 50% 50%;
+}
+
+.currentFeature > div::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 105%;
+  height: 105%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+  outline: var(--primary) solid 0.15em;
+}
+
+.currentFeature > div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotate 60s linear infinite;
+
+  outline: var(--primary) solid 0.15em;
+}
+
+.leftChain,
+.rightChain {
+  position: absolute;
+  width: 0.25em;
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.leftChain {
+  top: 0;
+  left: 15em;
+}
+
+.rightChain {
+  top: 0;
+  right: 15em;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.currentFeature h2 {
+  text-transform: uppercase;
+}
+
+.currentFeature p {
+  max-width: 50%;
+  text-align: justify;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -117,16 +272,46 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1500px) {
+  .leftChain {
+    top: 0;
+    left: 2.5em;
+  }
+
+  .rightChain {
+    top: 0;
+    right: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .currentFeature > div {
+    position: relative;
+    width: 20em;
+    height: 20em;
+  }
+
+  .currentFeature h2 {
+    font-size: 1em;
+  }
+
+  .currentFeature p {
+    font-size: 0.8em;
+  }
+
+  .leftChain,
+  .rightChain {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
   .welcomeContent {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -70%);
     border: none;
-  }
-
-  .welcomeContent button {
   }
 
   .welcomeContent video,
@@ -150,5 +335,9 @@
 
   .separator {
     width: 95%;
+  }
+
+  .featuresList h4 {
+    font-size: 0.8em;
   }
 }
