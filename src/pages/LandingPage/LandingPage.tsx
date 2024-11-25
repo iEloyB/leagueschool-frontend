@@ -4,10 +4,19 @@ function LandingPage() {
   return (
     <>
       <section className={`bigContainer ` + styles.welcomeContainer}>
-        <h1>Welcome</h1>
-        <div>
-          <button className="primary">Primary button</button>
-          <button className="secondary">Secondary button</button>
+        <div className={styles.videoContainer}>
+          <video src="/videos/battleAcademia.webm" autoPlay muted loop />
+          <div className={styles.blackScreen}></div>
+        </div>
+        <div className={styles.welcomeContent}>
+          <video src="/videos/battleAcademia.webm" autoPlay muted loop />
+          <div className={styles.blackScreen}></div>
+          <h1>League School</h1>
+          <button className="primary">Start learning</button>
+        </div>
+        <div className={styles.separator}>
+          <div className={styles.leftAnimation}></div>
+          <div className={styles.rightAnimation}></div>
         </div>
       </section>
       <section className="bigContainer debug">
