@@ -3,6 +3,7 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import NotFound from "./pages/NotFound/NotFound";
 import Header from "./components/Header/Header";
 import { Analytics } from "@vercel/analytics/react";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </>
   );
 }
