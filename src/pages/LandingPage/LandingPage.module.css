@@ -589,15 +589,15 @@
 
   .currentFeature > div {
     position: relative;
-    width: 10em;
-    height: 10em;
+    width: 15em;
+    height: 15em;
   }
 
   .currentFeature h2 {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 
   .currentFeature p {
-    font-size: 0.3em;
+    font-size: 0.6em;
   }
 }
