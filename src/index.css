@@ -91,6 +91,8 @@ body {
   font-weight: 400;
   color: var(--text);
   background-color: var(--background);
+
+  overflow-x: hidden;
 }
 
 * {
