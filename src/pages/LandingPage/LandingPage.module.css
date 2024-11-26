@@ -314,6 +314,7 @@
   transform: translate(-50%);
   text-transform: uppercase;
   color: var(--text);
+  text-align: center;
 }
 
 .pricingContent {
@@ -571,5 +572,18 @@
 
   .featuresList h4 {
     font-size: 0.8em;
+  }
+
+  .featuresList {
+    gap: 1em;
+  }
+
+  .pricingContainer > h1 {
+    font-size: 3em;
+    margin-bottom: 0em;
+  }
+
+  .pricingContainer {
+    gap: 5em;
   }
 }
