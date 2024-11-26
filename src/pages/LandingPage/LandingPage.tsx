@@ -12,7 +12,7 @@ function Welcome() {
         <video src="/videos/battleAcademia.webm" autoPlay muted loop />
         <div className={styles.blackScreen}></div>
         <h1>League School</h1>
-        <button className="primary">Start learning</button>
+        <button className="accent">Start learning</button>
       </div>
       <div className={styles.separator}>
         <div className={styles.leftAnimation}></div>
@@ -77,8 +77,73 @@ function Features() {
 
 function Pricing() {
   return (
-    <section className="bigContainer debug">
-      <h1>Pricing</h1>
+    <section className={styles.pricingContainer + " bigContainer"}>
+      <h1>Find Your Fit</h1>
+
+      <article className={styles.firstPricing}>
+        <div className={styles.pricingContent}>
+          <div>
+            <h3>Free</h3>
+            <p>Perfect for testing the waters before you dive into the Rift.</p>
+          </div>
+          <ul>
+            <li>Get free access for 14 days</li>
+            <li>Interactive tests</li>
+            <li>League dictionary</li>
+          </ul>
+        </div>
+
+        <div className={styles.price}>
+          <h4>$0</h4>
+        </div>
+      </article>
+
+      <article className={styles.secondPricing}>
+        <div className={styles.pricingContent}>
+          <div>
+            <h3>Standard</h3>
+            <p>Your go-to for climbing without blaming your jungler.</p>
+          </div>
+          <ul>
+            <li>Interactive tests</li>
+            <li>League dictionary</li>
+            <li>Progress tracker</li>
+            <li>Access to the community forum</li>
+            <li>Priority for new feature voting</li>
+          </ul>
+        </div>
+
+        <div className={styles.price}>
+          <h4>$50</h4>
+          <p>/ Per year</p>
+        </div>
+      </article>
+
+      <article className={styles.featuredPricing}>
+        <div className={`${styles.pricingContent} ${styles.premium}`}>
+          <div>
+            <h3>Premium</h3>
+            <p>
+              For those who want to support us while flexing their shiny badge.
+            </p>
+          </div>
+          <ul>
+            <li>Interactive tests</li>
+            <li>League dictionary</li>
+            <li>Progress tracker</li>
+            <li>Access to the community forum</li>
+            <li>Priority for new feature voting</li>
+            <li>Exclusive supporter badge</li>
+            <li>Customizable profile in the community</li>
+            <li>Directly support the project</li>
+          </ul>
+        </div>
+
+        <div className={styles.price}>
+          <h4>$100</h4>
+          <p>/ Per year</p>
+        </div>
+      </article>
     </section>
   );
 }
