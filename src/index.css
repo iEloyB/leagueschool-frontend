@@ -92,7 +92,7 @@ body {
   color: var(--text);
   background-color: var(--background);
 
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 * {
